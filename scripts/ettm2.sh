@@ -45,8 +45,8 @@ python test_multi_6domain_release.py \
     --config_path ./configs/multiple_datasets.yml \
     --stl_weight 0.001 \
     --equal $equal \
-    --checkpoint ./lora_revin_6domain_checkpoints_pmt1'_'$prompt/ \
-    --model_id ettm2_pmt1_no_pool_TEMPO'_'$gpt_layer'_'prompt_learn'_'$seq_len'_'$pred_len'_'$percent \
+    --checkpoint ./TEMPO_checkpoints/ \
+    --model_id ettm2_TEMPO'_'$gpt_layer'_'prompt_learn'_'$seq_len'_'$pred_len'_'$percent \
     --electri_multiplier $electri_multiplier \
     --traffic_multiplier $traffic_multiplier \
     --seq_len $seq_len \
