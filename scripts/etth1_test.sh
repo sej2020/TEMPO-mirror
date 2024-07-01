@@ -20,13 +20,13 @@ traffic_multiplier=1
 
 for percent in 100 
 do
-for pred_len in  192 
+for pred_len in 96 
 do
 for tmax in 20
 do
 for lr in 0.001 
 do
-for gpt_layer in 6 
+for gpt_layer in 3
 do
 for equal in 1 
 do
@@ -40,13 +40,13 @@ echo logs/$model/loar_revin_$percent'_'percent'_'$prompt'_'prompt'_'equal'_'$equ
 
 
 python test_multi_6domain_release.py \
-    --datasets ETTm1,ETTh1,ETTm2,electricity,traffic,weather \
-    --target_data ETTh2 \
+    --datasets ETTm1,ETTh2,ETTm2,electricity,traffic,weather \
+    --target_data ETTh1 \
     --config_path ./configs/multiple_datasets.yml \
     --stl_weight 0.001 \
     --equal $equal \
     --checkpoint ./TEMPO_checkpoints/ \
-    --model_id ETTh2_TEMPO'_'$gpt_layer'_'prompt_learn'_'$seq_len'_'$pred_len'_'$percent \
+    --model_id etth1_TEMPO'_'$gpt_layer'_'prompt_learn'_'$seq_len'_'$pred_len'_'$percent \
     --electri_multiplier $electri_multiplier \
     --traffic_multiplier $traffic_multiplier \
     --seq_len $seq_len \
