@@ -1,4 +1,4 @@
-# Time Series Foundation Model
+# Time Series Foundation Model (COPY)
 
 ## TEMPO: Prompt-based Generative Pre-trained Transformer for Time Series Forecasting
 
